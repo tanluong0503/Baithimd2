@@ -1,24 +1,25 @@
 package Bai_1;
 
 public class Experience extends Candidate {
-    private int ExpInYear;
-    private String ProSkill;
+    private int expInYear;
+    private String proSkills;
 
     public Experience() {
+
     }
 
-    public Experience(int certificatedID, String certificateName, int certificateRank, String certificatedDate, int ExpInYear, String ProSkill) {
-        super(certificatedId, certificatedName, certificatedRank, certificatedDate);
-        this.ExpInYear = ExpInYear;
-        this.ProSkill = ProSkill;
+    public Experience(int certificatedId, String certificatedName, int certificatedRank, String certificatedDate, int expInYear, String proSkills) {
+        super ( certificatedId, certificatedName, certificatedRank, certificatedDate );
+        this.expInYear = expInYear;
+        this.proSkills = proSkills;
     }
 
     public int getExpInYear() {
         return expInYear;
     }
 
-    public void setExpInYear(int ExpInYear){
-        this.expInYear() = expInYear;
+    public void setExpInYear(int expInYear) {
+        this.expInYear = expInYear;
     }
 
     public String getProSkills() {
@@ -30,7 +31,15 @@ public class Experience extends Candidate {
     }
 
     @Override
-    public void showMe() {
+    public String toString() {
+        return "Experience{" +
+                "expInYear=" + expInYear +
+                ", proSkills='" + proSkills + '\'' +
+                '}';
+    }
 
+    @Override
+    public void showMe() {
+        toString ();
     }
 }
